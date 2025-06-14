@@ -1,0 +1,30 @@
+// Se instala el plugin "REST Client" para hacer las peticiones, en reemplazo de la pag "POSTMAN"
+// Los numerales ### son para que aparezca la opcion "Send Request" desde la 2da peticion.
+
+// GET VIDEOS
+GET http://localhost:4000/videos
+
+### GET VIDEO
+GET http://localhost:4000/videos/60fc5df7d0c52a037b3bd957 
+
+### CREATE VIDEO
+POST http://localhost:4000/videos
+Content-Type: application/json
+
+{
+    "url": "https://www.youtube.com/watch?v=EIm4HvDgQCM",
+    "title": "Homer video ",
+    "description": "This is a Homer video"
+}
+
+### DELETE VIDEO
+DELETE http://localhost:4000/videos/60faf461e5dd7314cfb8ed61
+
+### UPDATE VIDEO
+PUT http://localhost:4000/videos/60fc5df7d0c52a037b3bd957
+Content-Type: application/json
+
+{
+    "title": "HOMER",
+    "description": "This is a BIG HOMER video"
+}
